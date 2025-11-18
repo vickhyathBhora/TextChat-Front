@@ -1,0 +1,121 @@
+/* FULL PAGE CENTER */
+.main {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* CARD */
+.FormDiv {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* TITLE */
+.header {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+/* FIELD WRAPPERS */
+.formDiv1,
+.PassDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* LABELS */
+.PhLable,
+.PassLable {
+  font-size: 15px;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+/* INPUT STYLES */
+.PhField,
+.PassField {
+  width: 90%;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  background: #f7fafc;
+  transition: all 0.2s ease;
+}
+
+.PhField:focus,
+.PassField:focus {
+  outline: none;
+  background: #ffffff;
+  border-color: #4c8bf5;
+  box-shadow: 0 0 0 2px rgba(76, 139, 245, 0.25);
+}
+
+/* INPUT + ICON WRAPPER */
+.InputWithIcon {
+  position: relative;
+  width: 100%;
+}
+
+.IconButton {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color:rgb(185, 181, 181);
+  border:none;
+  border-radius: 10px;
+  cursor: pointer;
+  height:100%;
+width:50px;
+}
+
+/* ERRORS */
+.PhError,
+.PassError {
+  font-size: 13px;
+  color: #e53e3e;
+  margin-top: 2px;
+}
+
+/* BUTTONS */
+.buttonDiv {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.SubmitButton {
+  width: 45%;
+  padding: 12px;
+  background: #4c8bf5;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.SubmitButton:hover {
+  background: #3b74d3;
+}
+
+.SubmitButton:active {
+  transform: scale(0.97);
+}
