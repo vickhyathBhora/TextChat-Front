@@ -34,7 +34,7 @@ export default function Signup() {
   };
 const signFetch = async (values: any,actions:any) => {
   try {
-    const res = await fetch("https://textchat-server.onrender.com/api/auth/signup", {
+    const res = await fetch("https://nodeserver-dbej.onrender.com/api/auth/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
