@@ -32,20 +32,31 @@ export default function Signup() {
   const togglePassword = () => {
     setShowPassword((prev) => (prev ? false : true));
   };
-const signFetch = async (values: any,actions:any) => {
+const signFetch = async (values: any, actions: any) => {
   try {
-    const res = await fetch("https://nodeserver-dbej.onrender.com/api/auth/signup", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(values),
-    });
+    const res = await fetch(
+      "https://nodeserver-dbej.onrender.com/api/auth/signup",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      }
+    );
 
-    const data = await res.text();
+    const data = await res.json(); // ✅ get real response
+
     console.log("Response:", data);
-    alert("Signup Success:data saved in db");
-      actions.resetForm(); 
+
+    // ✅ show backend message in alert
+    if (data.message) {
+      alert(data.message);
+    } else {
+      alert(JSON.stringify(data));
+    }
+
+    actions.resetForm();
   } catch (err) {
     console.error("Error:", err);
     alert("Something went wrong!");
